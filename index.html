@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Deleite Waffles & Pet</title>
+  <meta name="description" content="Carta digital. Waffle base con 1 salsa + chantilly. Toppings y salados. Colores pastel."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --pink:#F7A9D7; --pink-strong:#F07DBE; --blue:#8ED1F5; --lilac:#A787F0;
+      --cream:#FFF9EE; --choco:#6B3D2E; --text:#3b2b28;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--cream)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:30;background:rgba(255,249,238,.85);
+      backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #f1e7d7}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo-img{inline-size:44px;block-size:44px;border-radius:12px;object-fit:cover;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+    .brand h1{font-size:1.35rem;margin:0;font-weight:800;color:var(--choco)}
+    .cta{display:flex;gap:10px}
+    .btn{border:0;padding:10px 14px;border-radius:14px;background:var(--pink);color:#fff;font-weight:700;box-shadow:0 6px 16px rgba(240,125,190,.25)}
+    .btn-outline{background:#fff;color:var(--choco);border:2px solid var(--blue);box-shadow:none}
+
+    /* Hero */
+    .hero{padding:48px 0 24px;background:linear-gradient(180deg,#fff 0,var(--cream) 60%)}
+    .hero-wrap{display:grid;grid-template-columns:1fr;gap:22px;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #f1e7d7;border-radius:999px;padding:8px 12px;font-weight:600;color:var(--lilac)}
+    .hero h2{font-size:2.2rem;line-height:1.1;margin:8px 0;color:var(--choco)}
+    .hero p{margin:6px 0 16px}
+    .hero-photo{width:80%;max-width:520px;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,.15);display:block}
+    @media(min-width:920px){.hero-wrap{grid-template-columns:1.1fr .9fr}.hero h2{font-size:3rem}}
+
+    /* Sections */
+    .section{padding:30px 0}
+    .section h3{font-size:1.8rem;margin:0 0 8px}
+    .sub{color:#7b6c66;margin:0 0 18px}
+    .list{background:#fff;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.06);overflow:hidden}
+    .row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px 14px;border-top:1px dashed #eee}
+    .row:first-child{border-top:0}
+    .name{font-weight:600}
+    .price{font-weight:800;color:var(--choco)}
+    .badge-mini{font-size:.75rem;background:var(--blue);color:#fff;border-radius:999px;padding:4px 8px;margin-left:8px}
+
+    /* Footer */
+    footer{background:#fff;border-top:1px solid #f1e7d7}
+    .foot{display:grid;gap:10px;padding:18px 0}
+    @media(min-width:720px){.foot{grid-template-columns:1fr auto}}
+
+    /* Barra flotante móvil */
+    .dock{
+      position:fixed;z-index:40;left:50%;bottom:16px;transform:translateX(-50%);
+      display:flex;gap:10px;background:#fff;border:1px solid #f1e7d7;border-radius:999px;
+      padding:8px 10px;box-shadow:0 10px 30px rgba(0,0,0,.12)
+    }
+    .dock a{padding:8px 12px;border-radius:999px;font-weight:700}
+    .wa{background:var(--blue);color:#fff}
+    .ig{background:var(--pink);color:#fff}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="logo.jpg" alt="Logo Deleite" class="logo-img"/>
+        <h1>Deleite</h1>
+      </div>
+      <div class="cta">
+        <a href="#menu" class="btn-outline">Ver menú</a>
+        <a href="https://wa.me/573218140362" target="_blank" class="btn">Pedir por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO con foto -->
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span class="badge">🧇 Carta digital </span>
+          <h2>Waffle base $10.000<br><strong>incluye 1 salsa </strong> ✨</h2>
+          <p>Agrega toppings extra a tu gusto. Escríbenos por WhatsApp para ordenar o resolver dudas.</p>
+          <div class="cta">
+            <a class="btn" href="https://wa.me/573205441359" target="_blank">Ordenar por WhatsApp</a>
+            <a class="btn-outline" href="https://www.instagram.com/deleitewyp?igsh=MTFyemFyY3kyMGRrcg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+          </div>
+        </div>
+        <div>
+          <img src="waffle.jpg" alt="Waffle Deleite con toppings" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ: BASE -->
+    <section id="menu" class="section">
+      <div class="container">
+        <h3>Waffle base</h3>
+        <p class="sub">Incluye 1 salsa . Si quieres más salsas o toppings, agrégalos de la lista.</p>
+        <div class="list">
+          <div class="row">
+            <div class="name">Waffle Base <span class="badge-mini">incluye 1 salsa </span></div>
+            <div class="price">$10.000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ: TOPPINGS / SALSAS (sin fotos) -->
+    <section class="section">
+      <div class="container">
+        <h3>Toppings y salsas extra</h3>
+        <p class="sub">Precios sugeridos (según tu tabla). Elige los que quieras.</p>
+
+        <div class="list">
+          <!-- Frutas -->
+          <div class="row"><div class="name">Fresas</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Banano</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Mango</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Durazno</div><div class="price">$1.500</div></div>
+
+          <!-- Dulces & crujientes -->
+          <div class="row"><div class="name">Oreo</div><div class="price">$1.000</div></div>
+          <div class="row"><div class="name">Barquillos</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Mini brownies</div><div class="price">$2000</div></div>
+          <div class="row"><div class="name">Chocoramo mini</div><div class="price">$1500</div></div>
+          <div class="row"><div class="name">M&M</div><div class="price">$1500</div></div>
+
+          <!-- Salsas extra -->
+          <div class="row"><div class="name">Salsa de chocolate</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Salsa de mora</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Salsa rosada</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Salsa dulce maíz</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Salsa de piña</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Leche condensada</div><div class="price">$1000</div></div>
+          <div class="row"><div class="name">Arequipe</div><div class="price">$1000</div></div>
+
+          <!-- Otros -->
+          <div class="row"><div class="name">Bola de helado</div><div class="price">$2000</div></div>
+          <div class="row"><div class="name">Queso cuajada</div><div class="price">$1.500</div></div>
+          <div class="row"><div class="name">Pollo desmenuzado</div><div class="price">$2.500</div></div>
+          <div class="row"><div class="name">Tocineta</div><div class="price">$2.500</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SALADOS -->
+    <section class="section">
+      <div class="container">
+        <h3>Waffles De la casa</h3>
+        <p class="sub">Hechos al momento.</p>
+        <div class="list">
+          <div class="row"><div class="name">Deleite Dulce · Waffle, 1 Salsa, Fresa, Banano , dulce (oreo o barquillo), Helado </div><div class="price">$13.500</div></div>
+           <div class="row"><div class="name">Deleite Salado · Waffle, 1 Salsa, Pollo, Tocineta , Ripio de papa. </div><div class="price">$15.500</div></div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Barra flotante para contacto -->
+  <div class="dock">
+    <a class="wa" href="https://wa.me/573205441359" target="_blank">WhatsApp</a>
+    <a class="ig" href="https://www.instagram.com/deleitewyp?igsh=MTFyemFyY3kyMGRrcg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+    <a class="btn-outline" href="#menu">Ver menú</a>
+  </div>
+
+  <footer>
+    <div class="container foot">
+      <div>© <span id="year"></span> Deleite Waffles & Pet — Carta digital</div>
+      <div><a href="https://instagram.com/" target="_blank">Instagram</a> · <a href="https://wa.me/573001112223" target="_blank">WhatsApp</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
